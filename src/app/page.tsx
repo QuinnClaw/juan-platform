@@ -74,7 +74,7 @@ export default function LandingPage() {
                 href="/auth/signup"
                 className="inline-flex items-center justify-center rounded-lg bg-teal-600 px-8 py-3 text-base font-medium text-white shadow-lg shadow-teal-600/25 transition hover:bg-teal-700 hover:shadow-teal-600/40"
               >
-                Start Planning Free →
+                Start Planning for $4/mo →
               </Link>
               <Link
                 href="/pricing"
@@ -154,12 +154,12 @@ export default function LandingPage() {
               Simple, fair pricing
             </h2>
             <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
-              Start free. Upgrade when you&apos;re ready.
+              Plans starting at $4/mo. Upgrade anytime.
             </p>
           </div>
           <div className="mx-auto mt-12 grid max-w-4xl gap-8 lg:grid-cols-3">
             {[
-              { name: 'Free', price: '$0', desc: '1 active weekly plan', cta: 'Get Started' },
+              { name: 'Starter', price: '$4/mo', desc: '1 active weekly plan', cta: 'Get Started' },
               { name: 'Pro', price: '$9/mo', desc: 'Unlimited plans + analytics', cta: 'Start Pro Trial', featured: true },
               { name: 'Business', price: '$19/mo', desc: 'Everything + business tools', cta: 'Contact Us' },
             ].map((plan) => (
@@ -180,7 +180,7 @@ export default function LandingPage() {
                 <div className="mt-2 text-3xl font-bold text-slate-900 dark:text-white">{plan.price}</div>
                 <p className="mt-2 text-sm text-slate-500">{plan.desc}</p>
                 <Link
-                  href={plan.name === 'Free' ? '/auth/signup' : '/pricing'}
+                  href={plan.name === 'Starter' ? '/auth/signup' : '/pricing'}
                   className={`mt-6 block rounded-lg px-4 py-2 text-sm font-medium transition ${
                     plan.featured
                       ? 'bg-teal-600 text-white hover:bg-teal-700'
@@ -228,7 +228,7 @@ export default function LandingPage() {
             href="/auth/signup"
             className="mt-8 inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-medium text-teal-700 shadow-lg transition hover:bg-teal-50"
           >
-            Start Planning Free →
+            Start Planning for $4/mo →
           </Link>
         </div>
       </section>

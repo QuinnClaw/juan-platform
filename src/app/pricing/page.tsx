@@ -7,10 +7,10 @@ import Link from 'next/link';
 
 const plans = [
   {
-    name: 'Free',
-    monthlyPrice: 0,
-    yearlyPrice: 0,
-    description: 'Get started with the basics',
+    name: 'Starter',
+    monthlyPrice: 4,
+    yearlyPrice: 40,
+    description: 'Everything you need to start planning',
     features: [
       '1 active weekly plan',
       'Top 3 priorities',
@@ -18,10 +18,11 @@ const plans = [
       'Brain dump zone',
       'Distraction log',
       'Weekly review',
+      'Basic habit tracking',
     ],
     limitations: ['Limited to 1 active plan', 'No habit analytics', 'No PDF export'],
-    cta: 'Get Started Free',
-    priceId: null,
+    cta: 'Start for $4/mo',
+    priceId: { monthly: 'starter_monthly', yearly: 'starter_yearly' },
     featured: false,
   },
   {
